@@ -1,4 +1,4 @@
-//#ifndef COURSE_H
+#ifndef COURSE_H
 #define COURSE_H
 #pragma once
 #include <string>
@@ -24,8 +24,13 @@ public:
     string getCode() {
         return code_;
     }
-
+    int getGrade() {
+        return grade_enroll_;
+    }
+    string getMajor() {
+        return major_enroll_;
+    }
 
 };
 
-//#endif
+#endif

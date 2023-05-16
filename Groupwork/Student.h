@@ -5,6 +5,8 @@
 #include <vector>
 #include "Course.h" 
 #include<iostream>
+#pragma once
+#endif
 using namespace std;
 
 class Student : public Person {
@@ -37,9 +39,21 @@ public:
     
     void addCourse_taken(Course c) {
         courses_taken_.push_back(c);
-
     }
+    void addCourse_chosen(Course c) {
+        courses_chosen_.push_back(c);
+    }
+    vector<Course> getCourseChosen() {
+        return courses_chosen_;
+    }
+    int getGrade() {
+        return grade_;
+    }
+    string getMajor() {
+        return major_;
+    }
+
 
 };
 
-#endif
+

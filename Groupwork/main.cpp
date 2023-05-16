@@ -12,7 +12,6 @@ int main() {
 		if (m1.login() == false) {
 			break;
 		}
-
-		return 0;
 	}
+	return 0;
 }
