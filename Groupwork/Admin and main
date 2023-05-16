@@ -1,0 +1,91 @@
+//已知：
+// Student类-储存信息，学号，课程，搜索功能等
+// Person类-管理系统person信息，选择是admin or student
+// 需求：
+// Admin类-管理员添加，编辑，删除课程信息
+// main-实现
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+// 定义Person类，包括姓名和年龄两个属性
+class Person {
+public:
+    //...
+};
+
+// 定义Course类，包括课程名称和课程ID两个属性
+class Course {
+public:
+    //...
+};
+
+// 定义Student类，继承自Person类，并包括学号、所选课程和过往成绩三个属性
+class Student : public Person {
+public:
+    //...
+};
+
+// 定义Administrator类，继承自Person类，并包括管理课程和学生信息的权限
+class Administrator : public Person {
+public:
+    Administrator(string name = "", int age = 0) : Person(name, age) {}
+    ~Administrator() {}
+
+    void addCourse(Course& course) { m_courses.push_back(course); }
+    vector<Course>& getCourses() { return m_courses; }
+
+    void addStudent(Student& student) { m_students.push_back(student); }
+    vector<Student>& getStudents() { return m_students; }
+
+private:
+    vector<Course> m_courses;
+    vector<Student> m_students;
+};
+
+// 定义主程序，包括管理员和学生用户对不同功能的调用
+int main() {
+    // 创建管理员
+    Administrator admin("Admin", 30);
+
+    // 添加课程
+    Course c1("Math", 1);
+    Course c2("English", 2);
+    admin.addCourse(c1);
+    admin.addCourse(c2);
+
+    // 添加学生
+    Student s1("student1", 20, 1001);
+    Student s2("student2", 19, 1002);
+    admin.addStudent(s1);
+    admin.addStudent(s2);
+
+    /* 学生选择课程
+    vector<course>& courses = s1.getcourses();
+    for (int i = 0; i < admin.getcourses().size(); ++i) {
+        courses.push_back(admin.getcourses()[i]);
+    }*/
+
+
+    //// 管理员查看学生信息
+    //vector<Student>& students = admin.getStudents();
+    //for (int i = 0; i < students.size(); ++i) {
+    //    cout << "Name: " << students[i].getName() << endl;
+    //    cout << "Age: " << students[i].getAge() << endl;
+    //    cout << "ID: " << students[i].getId() << endl;
+    //    cout << "Courses: ";
+    //    for (int j = 0; j < students[i].getCourses().size(); ++j) {
+    //        cout << students[i].getCourses()[j].getName() << " ";
+    //    }
+    //    cout << endl;
+    //    cout << "Scores: ";
+    //    for (int j = 0; j < students[i].getScores().size(); ++j) {
+    //        cout << students[i].getScores()[j] << " ";
+    //    }
+    //    cout << endl;
+    //}
+
+    system("pause");
+    return 0;
+}
