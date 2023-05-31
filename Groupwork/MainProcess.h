@@ -204,7 +204,7 @@ public:
 		return true;
 	}
 	//bool searchStu(){}
-//0531学生信息查——————————————————————————————————————
+//0531—————————————————————————————————————
     bool searchStu() {
 	cout << "Enter the student ID you want to find: ";
 	int id;
@@ -219,10 +219,8 @@ public:
 	cout << "No student found with the given ID" << endl;
 	return false;
     }
-//————————————————————————————————————————
 
 	//bool deleteStu(){}   
-//0531学生信息删——————————————————————————————
     bool deleteStu() {
         cout << "Enter the student ID you want to delete: ";
         int id;
@@ -332,11 +330,43 @@ public:
 //——————————————————————————————————————————————————————————————————————
 
 	
-
-	bool manageMar() {
+//0531查分——————————————————————————————-
+	/*bool manageMar() {
 		//先输入并查找id，然后打印所有课程，输入code（push back到courses_taken_）。输入成绩（push back 到marks_)
 		return false;
-	}
+	}*/
+	
+	bool searchMar() {
+        cout << "Enter the course code to search marks: ";
+        string code;
+        cin >> code;
+        //先找课
+        Course course;
+        bool courseFound = false;
+        for (int i = 0; i < stu.getCourseChosen().size(); i++) {
+            if (stu.getCourseChosen()[i].getCode() == code) {
+                course = stu.getCourseChosen()[i];
+                courseFound = true;
+                break;
+            }
+        }
+        if (!courseFound) {
+            cout << "You have not chosen the course with the given code." << endl;
+            return false;
+        }
+        int marks;
+        for (int i = 0; i < stu.getMarks().size(); i++) {
+            if (stu.getMarks()[i].getCourseCode() == code) {
+                marks = stu.getMarks()[i].getMarks();
+                break;
+            }
+        }
+        cout << "Marks for course " << code << ": " << marks << endl;
+        return false;
+    }
+//————————————————————————————————————————	
+	
+	
 	bool Stu_menu() {
 		//选择界面
 		cout << "1.choose course   2.query mark  3.view the chosen course 4.quit" << endl;
