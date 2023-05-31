@@ -3,7 +3,7 @@
 #include "Menu.h"
 #include"Student.h"
 #include"Course.h"
-//#include <vector>
+#include <vector> //0531
 
 
 class MainProcess
@@ -204,14 +204,141 @@ public:
 		return true;
 	}
 	//bool searchStu(){}
-	//bool deleteStu(){}
+//0531学生信息查——————————————————————————————————————
+    bool searchStu() {
+	cout << "Enter the student ID you want to find: ";
+	int id;
+	cin >> id;
+	for (int i = 0; i < stu_info.size(); i++) {
+	    if (stu_info[i].getId() == id) {
+		cout << "Student found:" << endl;
+		stu_info[i].displayInfo();
+		return false;
+	    }
+	}
+	cout << "No student found with the given ID" << endl;
+	return false;
+    }
+//————————————————————————————————————————
+
+	//bool deleteStu(){}   
+//0531学生信息删——————————————————————————————
+    bool deleteStu() {
+        cout << "Enter the student ID you want to delete: ";
+        int id;
+        cin >> id;
+        int found = 0;
+        for (int i = 0; i < stu_info.size(); i++) {
+            if (stu_info[i].getId() == id) {
+                stu_info.erase(stu_info.begin() + i);
+                found++;
+                i--;
+            }
+        }
+        if (found == 0) {
+            cout << "No student found with the given ID" << endl;
+        }
+        else {
+            cout << "Student with ID " << id << " deleted successfully." << endl;
+        }
+        return false;
+    }
+//————————————————————————————————————————————————————————————————————————
+	
+
+//0531考试得分————————————————————————————————————————————————————————————————
+    bool manageScores() {
+        cout << "1: Add test score  2: Delete test score  3: Update test score  4: Quit" << endl;
+        int choice = this->inputInt();
+        if (choice == 1) {
+            while (this->addScore());
+        }
+        else if (choice == 2) {
+            while (this->deleteScore());
+        }
+        else if (choice == 3) {
+            while (this->updateScore());
+        }
+        else if (choice == 4) {
+            return false;
+        }
+        return true;
+    }
+
+	
+    bool addScore() {
+        cout << "Enter the course code: ";
+        string code;
+        cin >> code;
+        // 根据 课代码 找Student
+        Student* student = nullptr;
+        for (int i = 0; i < stu_info.size(); i++) {
+		    vector<Course>& coursesChosen = stu_info[i].getCourseChosen();
+		    for (int j = 0; j < coursesChosen.size(); j++) {
+		    if (coursesChosen[j].getCode() == code) {
+			student = &stu_info[i];
+			break;
+		    }
+            }
+            if (student != nullptr) {
+            break;
+            }
+        }
+        if (student == nullptr) {
+            cout << "No student found for the given course code" << endl;
+            return true;
+        }
+        int score;
+        cout << "Enter the test score: ";
+        cin >> score;
+        cout << "Test score added successfully" << endl;
+        return true;
+    }
+
+	
+    bool deleteScore() {
+        cout << "Enter the course code you want to delete the test score for: ";
+        string code;
+        cin >> code;
+        for (int i = 0; i < stu_info.size(); i++) {
+            if (stu_info[i].hasCourseChosen(code)) {
+                stu_info[i].deleteTestScore(code);
+                cout << "Test score for course " << code << " deleted successfully." << endl;
+                return false;
+            }
+        }
+        cout << "No course found with the given code!" << endl;
+        return false;
+    }
+	
+
+    bool updateScore() {
+        cout << "Enter the course code you want to update the test score for: ";
+        string code;
+        cin >> code;
+        for (int i = 0; i < stu_info.size(); i++) {
+            if (stu_info[i].hasCourseChosen(code)) {
+                cout << "Enter the new test score: ";
+                int score;
+                cin >> score;
+                stu_info[i].updateTestScore(code, score);
+                cout << "Test score for course " << code << " updated successfully." << endl;
+                return false;
+            }
+        }
+        cout << "No course found with the given code!" << endl;
+        return false;
+    }
+//——————————————————————————————————————————————————————————————————————
+
+	
 
 	bool manageMar() {
-		//�����벢����id��Ȼ���ӡ���пγ̣�����code��push back��courses_taken_��������ɼ���push back ��marks_)
+		//先输入并查找id，然后打印所有课程，输入code（push back到courses_taken_）。输入成绩（push back 到marks_)
 		return false;
 	}
 	bool Stu_menu() {
-		//ѡ�����
+		//选择界面
 		cout << "1.choose course   2.query mark  3.view the chosen course 4.quit" << endl;
 		int choice = this->inputInt();
 		if (choice == 1) {
