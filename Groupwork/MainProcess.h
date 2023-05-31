@@ -436,12 +436,28 @@ public:
 	bool CorIdCheck(string code,vector<Course>c) {
 		for (int i = 0; i < c.size(); i++) {
 			if (code == c[i].getCode()) {
-				//cout << "This code has been used,please input again!" << endl;
+				cout << "This code has been used,please input again!" << endl; //0531直接取消了这行注释
 				return false;
 			}
 		}
 		return true;
 	}
+	
+	//0531————————————————————————
+	bool StuIdCheck(string id, vector<Student> students) {
+	    for (int i = 0; i < students.size(); i++) {
+		if (id == students[i].getId()) {
+		    cout << "This ID has been used, please input again!" << endl;
+		    return false;
+		}
+	   }
+	    return true;
+	}
+	//————————————————————————————
+	
+	
+	
+	
 
 };
 
