@@ -14,7 +14,7 @@ course and student information.
 
 - **Language**: C++
 - **Paradigm**: Object-Oriented Programming (OOP)
-- **Environment**: Command-Line Interface (CLI)
+- **Environment**: Windows 10, Visual Studio IDE
 
 ## ✨ Features
 
@@ -23,7 +23,10 @@ course and student information.
 - ✅ Console-based interactive menu system
 - ✅ Input validation and simple error handling
 
-![image](https://github.com/user-attachments/assets/9bf46a7c-8902-4acd-ad4e-5a888e14431e)
+![image](https://github.com/user-attachments/assets/65ed9e95-e48d-4a79-82f3-5020e282ea59)
+
+
+
 ## 👥 Contributors
 
 Thanks to the following people who participated in this project:
@@ -31,6 +34,6 @@ Thanks to the following people who participated in this project:
 | Name | GitHub Profile | Role |
 |------|----------------|------|
 | Ruoxuan Cao | [@Ruoxuann](https://github.com/Ruoxuann) | Project Lead |
-| Zeyu Chen | [@teammate1](https://github.com/teammate1) | Feature Implementation |
-| Qingya.Huang | [@teammate2](https://github.com/teammate2) | Testing & Documentation |
-| Lin.Luo | [@teammate2](https://github.com/teammate2) | Coding & Documentation |
+| Zeyu Chen | [@blingbling26](https://github.com/blingbling26) | Feature Implementation |
+| Qingya Huang | [@huaiqqia](https://github.com/huaiqqia) | Testing & Documentation |
+| Lin Luo | [@Lin21578](https://github.com/Lin21578) | Coding & Documentation |
