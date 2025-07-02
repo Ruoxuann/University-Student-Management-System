@@ -2,7 +2,7 @@
 
 > "A pure C++ University management system, supporting browse, add, modify, and delete for both administrators and students."
 
-## 📖 Background
+## Background
 
 Welcome to the University Course and Student Information System. This project was developed as part of a group assignment for the course *C++ Programming and Software Eng. II*. This 
 system is designed to store and manage information related to students and 
@@ -10,13 +10,13 @@ courses offered in a university. The system provides different levels of access
 to administrators and students so they can browse, add, modify, and delete 
 course and student information. 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Language**: C++
 - **Paradigm**: Object-Oriented Programming (OOP)
 - **Environment**: Windows 10, Visual Studio IDE
 
-## ✨ Features
+## Features
 
 - ✅ Add, view, modify, and delete student records
 - ✅ Uses classes to represent students and system logic
@@ -27,7 +27,7 @@ course and student information.
 
 
 
-## 👥 Contributors
+## Contributors
 
 Thanks to the following people who participated in this project:
 
