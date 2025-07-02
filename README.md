@@ -31,5 +31,6 @@ Thanks to the following people who participated in this project:
 | Name | GitHub Profile | Role |
 |------|----------------|------|
 | Ruoxuan Cao | [@Ruoxuann](https://github.com/Ruoxuann) | Project Lead |
-| Name2 | [@teammate1](https://github.com/teammate1) | Feature Implementation |
-| Name3 | [@teammate2](https://github.com/teammate2) | Testing & Documentation |
+| Zeyu Chen | [@teammate1](https://github.com/teammate1) | Feature Implementation |
+| Qingya.Huang | [@teammate2](https://github.com/teammate2) | Testing & Documentation |
+| Lin.Luo | [@teammate2](https://github.com/teammate2) | Coding & Documentation |
