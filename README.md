@@ -20,17 +20,16 @@ course and student information.
 
 - ✅ Add, view, modify, and delete student records
 - ✅ Uses classes to represent students and system logic
+- ✅ Console-based interactive menu system
+- ✅ Input validation and simple error handling
 
-## 📁 Project Structure
+![image](https://github.com/user-attachments/assets/9bf46a7c-8902-4acd-ad4e-5a888e14431e)
+## 👥 Contributors
 
-```bash
-project-name/
-├── backend/                # Backend logic
-│   ├── app.py
-│   └── ...
-├── frontend/               # Frontend UI
-│   ├── index.html
-│   └── ...
-├── requirements.txt        # Python dependencies
-├── README.md
-└── LICENSE
+Thanks to the following people who participated in this project:
+
+| Name | GitHub Profile | Role |
+|------|----------------|------|
+| Ruoxuan Cao | [@Ruoxuann](https://github.com/Ruoxuann) | Project Lead |
+| Name2 | [@teammate1](https://github.com/teammate1) | Feature Implementation |
+| Name3 | [@teammate2](https://github.com/teammate2) | Testing & Documentation |
