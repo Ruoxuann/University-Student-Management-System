@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/9bf46a7c-8902-4acd-ad4e-5a888e14431e)# University Student Management System 
+# University Student Management System 
 
 > "A pure C++ University management system, supporting browse, add, modify, and delete for both administrators and students."
 
@@ -20,7 +20,10 @@ course and student information.
 
 - ✅ Add, view, modify, and delete student records
 - ✅ Uses classes to represent students and system logic
+- ✅ Console-based interactive menu system
+- ✅ Input validation and simple error handling
 
+![image](https://github.com/user-attachments/assets/9bf46a7c-8902-4acd-ad4e-5a888e14431e)
 ## 👥 Contributors
 
 Thanks to the following people who participated in this project:
